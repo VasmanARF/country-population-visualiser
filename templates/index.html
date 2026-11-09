@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Population and Flags</title>
+    <link rel="stylesheet" href="">
+    <style>
+      body {
+        display: flex;
+        /* Stacks elements vertically */
+        flex-direction: column;
+        /* Centres content horizontally */
+        align-items: center;
+        margin: 0;
+        /* Adds some space from the top */
+        padding-top: 20px;
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+        /* Adds Gradient */
+        background: linear-gradient(to bottom, #000000, #060a34, #000000);
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        /* Ensures the title is centred */
+        text-align: center;
+        color: #ffffff;
+      }
+
+      #countryTable {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 50%;
+        text-align: center;
+      }
+
+      #countryTable th,
+      #countryTable td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #flagContainer img {
+        margin-top: 10px;
+        width: 300px !important;
+        /* Maintain aspect ratio */
+        height: auto !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Country Population and Flags</h1>
+
+    <!-- Search box -->
+    <label for="searchBox">Search for a country:</label>
+    <input type="text" id="searchBox" placeholder="Enter country name..." />
+
+    <!-- Dropdown menu -->
+    <label for="countryDropdown">Select a country:</label>
+    <select id="countryDropdown">
+      <option value="">Select a country</option>
+    </select>
+
+    <!-- Table for displaying selected country data -->
+    <table id="countryTable" style="display: none">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Population (2018)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="selectedCountry"></td>
+          <td id="selectedPopulation"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Container for displaying the flag -->
+    <div id="flagContainer"></div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
